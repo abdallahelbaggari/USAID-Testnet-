@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GrowthBridge · Learn sustainable development</title>
+<meta name="description" content="GrowthBridge: learn the 17 Sustainable Development Goals with short lessons and quizzes, take daily actions and earn shareable certificates. Independent learning app on Pi.">
+<meta name="theme-color" content="#047857">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://sdk.minepi.com https://*.minepi.com https://*.pinet.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https:; frame-src https:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="gb.css?v=1">
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+</head>
+<body>
+<div id="landing">
+  <section class="ld-hero">
+    <div class="ld-top"><div class="brand"><img src="icons/icon-192.png" alt="">GrowthBridge</div><span class="ld-net" id="ld-net">Pi Mainnet</span></div>
+    <h1 class="ld-h">Learn. Act. <em>Grow.</em></h1>
+    <p class="ld-p">Short lessons on the 17 Sustainable Development Goals, daily actions you can take, and certificates you can share.</p>
+  </section>
+  <section class="ld-card">
+    <div class="ld-feat">
+      <div><i>📚</i><span><b>17 short lessons</b><small>From ending poverty to climate action, explained simply.</small></span></div>
+      <div><i>✅</i><span><b>Quizzes and badges</b><small>Check what you learned and track your progress.</small></span></div>
+      <div><i>🌱</i><span><b>Daily actions</b><small>Small steps for people and planet, with streaks.</small></span></div>
+      <div><i>🎓</i><span><b>Certificates</b><small>Share every goal you complete.</small></span></div>
+    </div>
+    <button class="btn" id="signin" type="button"><span class="pi-dot">π</span><span id="signin-t">Sign in with Pi</span></button>
+    <button class="btn ghost" id="explore" type="button">Start learning without signing in</button>
+    <div class="ld-msg" id="ld-msg" role="status"></div>
+  </section>
+  <footer class="ld-foot"><a href="terms-of-service.html">Terms</a>·<a href="privacy-policy.html">Privacy</a><div style="margin-top:6px">© GrowthBridge 2026 · Independent learning app, not affiliated with the United Nations or Pi Network</div></footer>
+</div>
+<div id="app" hidden>
+  <header id="top"><div class="brand"><img src="icons/icon-192.png" alt="">GrowthBridge</div><div style="display:flex;align-items:center"><span class="netb" id="netb" hidden>Testnet</span><button class="avatar" type="button" data-tab="me" id="av" aria-label="Profile">G</button></div></header>
+  <main id="view"></main>
+  <nav id="tabs" aria-label="Main">
+    <button type="button" data-tab="home" class="on"><span class="b"><svg class="ic" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Home</button>
+    <button type="button" data-tab="learn"><span class="b"><svg class="ic" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>Learn</button>
+    <button type="button" data-tab="act"><span class="b"><svg class="ic" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>Act</button>
+    <button type="button" data-tab="me"><span class="b"><svg class="ic" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Profile</button>
+  </nav>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="gb-content.js?v=1"></script>
+<script src="gb.js?v=1"></script>
+</body>
+</html>
